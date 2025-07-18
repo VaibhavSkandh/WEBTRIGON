@@ -18,7 +18,6 @@ body {
 .left-section {
     color: white;
     width: 35%;
-    padding: 60px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,10 +31,10 @@ body {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 60px;
-    position: relative;
+    display: block;
+    width: 80%;
+    margin: 20% auto;
+    padding: 10px 10px 10px 10px;
     z-index: 1;
     opacity: 0;
     animation: slideFromLeft 0.5s forwards;
@@ -45,7 +44,9 @@ body {
 }
 
 .logo-icon {
-    width: 90px;
+    width:16%;
+    display: inline-block;
+    vertical-align: middle;
     opacity: 0;
     animation: slideFromLeft 0.5s forwards;
     animation-delay: 1.2s;
@@ -54,32 +55,46 @@ body {
 
 .logo-text {
     display: inline-block;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    padding-left: 27px;
     vertical-align: middle;
     font-size: 30px;
     color: white;
     font-family: "Poppins";
     box-sizing: border-box;
-    font-weight: 80;
+    font-weight: 500;
 }
 
 .main-heading {
     font-size: 25px;
-    font-weight: lighter;
+    font-weight: 400;
     line-height: 1.2;
     word-spacing: .5px;
-    margin-bottom: 30px;
+    margin: 0 auto;
     position: relative;
     opacity: 0;
     animation: slideFromLeft 0.5s forwards;
     animation-delay: 1.2s;
 }
 
-.sub-text {
+.sub-text-1{
+    font-size: 18px;
+    color: #b0b0b0;
+    line-height: 1.5;
+    margin:0 auto;
+    padding: 30px 0;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    animation: slideFromLeft 0.5s forwards;
+    animation-delay: 1.2s;
+}
+.sub-text-2{
     font-size: 20px;
     color: #b0b0b0;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin:0 auto;
+    padding-bottom: 25px;
     position: relative;
     z-index: 1;
     opacity: 0;
@@ -119,11 +134,11 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 88px;
-    gap: 40px;
+    padding: 36px;
+    gap: 99px;
     z-index: 6;
     background-color: transparent;
-    padding-left: 509px;
+    padding-left: 395px;
     opacity: 0;
     animation: fadeBackground 1s forwards;
 }
@@ -131,7 +146,7 @@ body {
 .nav-link {
     text-decoration: none;
     color: #666;
-    font-size: 16px;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
     font-size: 15px;
 }
