@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-section {
+    color: white;
+    width: 35%;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: black;
+    font-weight: 300;
+    animation: slideFromLeft 0.5s forwards;
+    animation-delay: 0.7s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    animation: slideFromLeft 0.5s forwards;
+    animation-delay: 1s;
+
+}
+
+.logo-icon {
+    width: 90px;
+    animation: slideFromLeft 0.5s forwards;
+    animation-delay: 1.5s;
+}
+
+.logo-text {
+    display: inline-block;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    font-size: 25px;
+    color: white;
+    font-family: "Poppins";
+    box-sizing: border-box;
+    font-weight: 50;
+}
+
+.main-heading {
+    font-size: 25px;
+    font-weight: lighter;
+    line-height: 1.2;
+    word-spacing: .5px;
+    margin-bottom: 30px;
+    position: relative;
+    animation: slideFromLeft 0.5s forwards;
+    animation-delay: 1.3s;
+}
+
+.sub-text {
+    font-size: 20px;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    animation: slideFromLeft 0.5s forwards;
+    animation-delay: 1.5s;
+}
+
+.button {
+    background-color: #dc5a5a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+    animation: slideFromLeft 0.5s forwards;
+    animation-delay: 1.9s;
+}
+
+.button:hover {
+    background-color: #c54545;
+}
+
+.right-section {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 88px;
+    gap: 40px;
+    z-index: 6;
+    background-color: transparent;
+    padding-left: 509px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    font-size: 15px;
+}
+
+.nav-link:hover {
+    color: #dc5a5a;
+}
+
+.illustration-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.city-illustration {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#img1 {
+    position: absolute;
+    top: 0%;
+    z-index: 0;
+    width: 100%;
+    height: 78vh;
+    opacity: 0;
+    animation: fadeBackground 1s forwards;
+    animation-delay: 0.5s;
+}
+
+#img2 {
+    position: absolute;
+    top: 8%;
+    z-index: 1;
+    width: 100%;
+    height: 57vh;
+    opacity: 0;
+    animation: fadeBackground 0.5s forwards;
+    animation-delay: 1.07s;
+}
+
+#img3 {
+    position: absolute;
+    top: 20%;
+    z-index: 2;
+    width: 100%;
+    height: 40vh;
+    opacity: 0;
+    animation: fadeBackground 0.5s forwards;
+    animation-delay: 1s;
+}
+
+#img4 {
+    position: absolute;
+    top: 22%;
+    z-index: 3;
+    width: 100%;
+    height: 59vh;
+    opacity: 0;
+    animation: fadeBackground 0.5s forwards;
+    animation-delay: 1s;
+}
+
+.grass {
+    position: absolute;
+    top: 60%;
+    z-index: 3;
+    width: 100%;
+}
+
+.shops {
+    z-index: 6;
+    position: relative;
+    left: 3%;
+    top: 47%;
+    width: 96%;
+}
+
+.search-container {
+    padding: 30px 50px 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+.search-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    border: 7px solid #9b9696;
+    border-radius: 7px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 11px;
+    border: none;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-button {
+    background-color: #dc5a5a;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #c54545;
+}
+
+.image {
+    z-index: -1;
+}
+
+#shop1,
+#shop2,
+#shop3,
+#shop4,
+#shop5 {
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: center;
+    animation: popup 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        /* Starts off-screen to the left */
+        opacity: 0;
+        /* Starts completely transparent */
+    }
+
+    to {
+        transform: translateX(0%);
+        /* Ends at its original position */
+        opacity: 1;
+        /* Ends fully opaque */
+    }
+}
+
+@keyframes fadeBackground {
+    from {
+        opacity: 0;
+        /* Starts completely transparent */
+    }
+
+    to {
+        opacity: 1;
+        /* Ends fully opaque */
+    }
+}
